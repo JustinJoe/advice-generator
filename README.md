@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - [Solution Repo](https://github.com/JustinJoe/advice-generator)
-- [Live Site](https://your-live-site-url.com)
+- [Live Site](https://advice-generator-justinjoe.netlify.app/)
 
 ## My process
 I started with looking at the design, breaking it down it into blocks, and then elements. This helped me write resusable rules for my CSS and also made it easier to structure my code for the mobile and desktop layouts. I then moved on to building out the HTML, CSS and JS.
