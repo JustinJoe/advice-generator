@@ -1,0 +1,175 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Base Style */
+
+:root {
+    --font-col-prim: hsl(193, 38%, 86%);
+    --font-col-sec: hsl(150, 100%, 66%);
+    
+    --col-light: hsl(217, 19%, 38%);
+    --col-medium: hsl(217, 19%, 24%);
+    --col-dark: hsl(218, 23%, 16%);
+    font-size: 1em;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--col-dark);
+    color: var(--font-col-prim);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Utility Style */
+.text-center {
+    text-align: center;
+}
+
+/* Module Style */
+.container {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    background-color: var(--col-medium);
+    padding: 2em 1em;
+    border-radius: 0.5em;
+}
+
+.card > * + * {
+    margin-top: 1em;
+}
+
+.card cite {
+    color: var(--font-col-sec);
+    margin-bottom: 2em;
+}
+
+.card__button {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    top: 3em;
+    margin-top: 0;
+    background-color: var(--font-col-sec);
+    border: 0.5em var(--font-col-sec) solid;
+    border-radius: 50%;
+}
+
+.card__button:hover {
+    cursor: pointer;    
+}
+
+.card__button:active {
+    box-shadow: 0.3em 0.3em 1em var(--font-col-sec), -0.3em -0.3em 1em var(--font-col-sec), 0.3em -0.3em 1em var(--font-col-sec), -0.3em 0.3em 1em var(--font-col-sec);
+}
+
+.card__divider {
+    background-image: url(../images/pattern-divider-mobile.svg);
+    background-repeat: no-repeat;
+    height: 1em;
+    background-position: center;
+}
+
+.attribution {
+    margin-top: 5em;
+}
+
+.attribution > a {
+    text-decoration: none;
+    color: var(--font-col-sec);
+}
+
+.attribution > a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 45em) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        width: 26em;
+        min-width: 40%;
+    }
+
+    .card__divider {
+        background-image: url(../images/pattern-divider-desktop.svg);
+    }
+}
+
+@media (min-width: 67em) {
+    body {
+        font-size: 1.75rem;
+    }
+
+    .container {
+        max-width: 25%;
+    }
+}
